@@ -37,6 +37,8 @@
 
 05-21-2018 2:32pm - HTML scaffolding built out.
 
+05-21-2018 3:11pm - IIFE for index.js completed.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
