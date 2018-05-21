@@ -31,7 +31,9 @@
 
 05-21-2018 2:09pm - Added additional files to repo.
 
-05-21-2018 2:26pm - HTML head block complete.
+05-21-2018 2:16pm - HTML head block complete.
+
+05-21-2018 2:23pm - Placeholder Handlebar template created.
 
 ## Credits and Collaborations
 
