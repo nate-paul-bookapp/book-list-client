@@ -35,6 +35,8 @@
 
 05-21-2018 2:23pm - Placeholder Handlebar template created.
 
+05-21-2018 2:32pm - HTML scaffolding built out.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
