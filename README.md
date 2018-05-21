@@ -31,6 +31,8 @@
 
 05-21-2018 2:09pm - Added additional files to repo.
 
+05-21-2018 2:26pm - HTML head block complete.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
