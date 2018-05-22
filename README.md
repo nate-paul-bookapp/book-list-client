@@ -39,6 +39,8 @@
 
 05-21-2018 3:11pm - IIFE for index.js completed.
 
+05-22-2018 9:26am - Book constructor created.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
