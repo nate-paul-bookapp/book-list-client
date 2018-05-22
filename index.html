@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book App</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+    <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+    <script id="book-template" type="text/x-handlebars-template">
+      <article id="book-block">
+        <img id="book-image" src="http://via.placeholder.com/350x350" alt="Placeholder image" />
+        <div id="title-block">
+          <h2>{{title}}</h2>
+          <p>{{author}}</p>
+          <p>{{description}}</p>
+        </div>
+      </article>
+    </script>
   </head>
   <body>
-    
+    <nav>
+      <img src="http://via.placeholder.com/80x80" alt="Logo" />
+      <h1>books app</h1>
+    </nav>
+    <main>
+      <section class="book-view">
+        <a>my books</a>
+        <p id="book-count">Total books in database: </p>
+        <div id="books-display"></div>
+      </section>
+      <section id="about-us" class="container">
+
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
+        <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
+      </ul>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="scripts/models/book.js"></script>
+    <script src="scripts/views/book-view.js"></script>
+    <script src="scripts/views/error-view.js"></script>
+    <script src="scripts/index.js"></script>
+    <script>
+      app.Book.fetchAll(app.bookView.initIndexPage);
+    </script>
   </body>
 </html> 
