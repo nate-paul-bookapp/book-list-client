@@ -41,6 +41,8 @@
 
 05-22-2018 9:26am - Book constructor created.
 
+05-22-2018 9:46am - bookView IIFE created.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)

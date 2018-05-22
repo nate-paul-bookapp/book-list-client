@@ -1,27 +1,34 @@
 'use strict';
 
-function Book(bookLiteral) {
-  Object.keys(bookLiteral).forEach(key => this[key] = bookLiteral[key]);
-}
+var app = app || {};
 
-Book.all = [];
+(function(module) {
 
-Book.prototype.toHtml = function() {
-  var template = Handlebars.compile($(`#book-template`).text());
+  function Book(bookLiteral) {
+    Object.keys(bookLiteral).forEach(key => this[key] = bookLiteral[key]);
+  }
 
-  return template(this);
-};
+  Book.all = [];
 
-Book.loadAll = bookData => {
-  bookData.sort((a,b) => a.author - b.author);
+  Book.prototype.toHtml = function() {
+    var template = Handlebars.compile($(`#book-template`).text());
 
-  Book.all = bookData.map(bookObj => new Book(bookObj));
-};
+    return template(this);
+  };
 
-Book.fetchAll = callback => {
-  $.get('/books')
-    .then(response => {
-      Book.loadAll(response);
-      callback();
-    });
-};
+  Book.loadAll = bookData => {
+    bookData.sort((a,b) => a.title - b.title);
+
+    Book.all = bookData.map(bookObj => new Book(bookObj));
+  };
+
+  Book.fetchAll = callback => {
+    $.get('/books')
+      .then(response => {
+        Book.loadAll(response);
+        callback();
+      });
+  };
+
+  module.Book = Book;
+})(app);
