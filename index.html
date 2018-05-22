@@ -25,8 +25,14 @@
       <h1>books app</h1>
     </nav>
     <main>
-      <a>my books</a>
-      <div id="book-list"></div>
+      <section class="book-view">
+        <a>my books</a>
+        <p id="book-count">Total books in database: </p>
+        <div id="books-display"></div>
+      </section>
+      <section id="about-us" class="container">
+
+      </section>
     </main>
     <footer>
       <ul>
@@ -36,6 +42,12 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="scripts/models/book.js"></script>
+    <script src="scripts/views/book-view.js"></script>
+    <script src="scripts/views/error-view.js"></script>
     <script src="scripts/index.js"></script>
+    <script>
+      app.Book.fetchAll(app.bookView.initIndexPage);
+    </script>
   </body>
 </html> 
