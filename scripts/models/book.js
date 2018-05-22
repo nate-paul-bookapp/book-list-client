@@ -23,8 +23,9 @@ var app = app || {};
   };
 
   Book.fetchAll = callback => {
-    $.get('/api/vi/books')
+    $.get('/api/v1/books')
       .then(response => {
+        console.log(response);
         Book.loadAll(response);
         callback();
       });
