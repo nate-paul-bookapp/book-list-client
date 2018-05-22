@@ -1,7 +1,11 @@
-* {
-  background-color: rgb(179, 179, 179);
+html {
+  background-color: rgb(225, 225, 225);
 }
 
-nav {
-  background-color: rgb(224, 224, 224);
+header {
+  background-color: rgb(150, 150, 150);
+}
+
+main {
+  background-color: rgb(240, 240, 240);
 }
