@@ -10,11 +10,12 @@ var bookView = {};
     $('.container').hide();
     $('.book-view').show();
 
-    console.log(app.Book.all);
     app.Book.all.forEach(elem => {
-
       $('#book-display').append(elem.toHtml());
     });
+
+    console.log(app.Book.all.length);
+    $('#book-count').append(app.Book.all.length);
   };
 
   module.bookView = bookView;
