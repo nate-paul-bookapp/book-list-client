@@ -43,6 +43,8 @@
 
 05-22-2018 9:46am - bookView IIFE created.
 
+05-22-2018 10:10am - errorView IIFE created.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)

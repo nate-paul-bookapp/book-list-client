@@ -23,7 +23,7 @@ var app = app || {};
   };
 
   Book.fetchAll = callback => {
-    $.get('/books')
+    $.get('/api/vi/books')
       .then(response => {
         Book.loadAll(response);
         callback();
