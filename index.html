@@ -7,39 +7,46 @@
     <link rel="stylesheet" type="text/css" href="styles/reset.css" />
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/layout.css" />
-    <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+    <link rel="stylesheet" type="text/css"  href="styles/modules.css" />
+
     <script id="book-template" type="text/x-handlebars-template">
       <article id="book-block">
-        <img id="book-image" src="http://via.placeholder.com/350x350" alt="Placeholder image" />
-        <div id="title-block">
+        <img id="book-image" src="{{{image_url}}}" alt="Placeholder image" />
+        <div id="book-stuff">
           <h2>{{title}}</h2>
           <p>{{author}}</p>
           <p>{{description}}</p>
         </div>
       </article>
     </script>
+
   </head>
+
   <body>
-    <nav>
-      <img src="http://via.placeholder.com/80x80" alt="Logo" />
-      <h1>books app</h1>
-    </nav>
+    <header>
+      <nav>
+        <img src="http://via.placeholder.com/80x80" alt="Logo" />
+        <h1>books app</h1>
+      </nav>
+    </header>
+
     <main>
       <section class="book-view">
         <a>my books</a>
         <p id="book-count">Total books in database: </p>
-        <div id="books-display"></div>
+        <div id="book-display"></div>
       </section>
       <section id="about-us" class="container">
-
       </section>
     </main>
+
     <footer>
       <ul>
         <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
         <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
       </ul>
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="scripts/models/book.js"></script>
@@ -50,4 +57,5 @@
       app.Book.fetchAll(app.bookView.initIndexPage);
     </script>
   </body>
+
 </html> 

@@ -45,6 +45,10 @@
 
 05-22-2018 10:10am - errorView IIFE created.
 
+05-22-2018 12:47pm - Got books to render to the DOM.
+
+05-22-2018 1:26pm - Styling progressing on front-end; Icons files added to repo.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
