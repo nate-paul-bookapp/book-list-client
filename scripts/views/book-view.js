@@ -10,7 +10,11 @@ var bookView = {};
     $('.container').hide();
     $('.book-view').show();
 
-    app.Book.all.forEach(elem => $('#book-display').append(elem.toHtml()));
+    console.log(app.Book.all);
+    app.Book.all.forEach(elem => {
+
+      $('#book-display').append(elem.toHtml());
+    });
   };
 
   module.bookView = bookView;

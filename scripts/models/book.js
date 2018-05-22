@@ -17,15 +17,13 @@ var app = app || {};
   };
 
   Book.loadAll = bookData => {
-    bookData.sort((a,b) => a.title - b.title);
-
     Book.all = bookData.map(bookObj => new Book(bookObj));
   };
 
   Book.fetchAll = callback => {
-    $.get('/api/v1/books')
+    console.log(`${module.ENVIRONMENT.apiUrl}/api/v1/books`);
+    $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/books`)
       .then(response => {
-        console.log(response);
         Book.loadAll(response);
         callback();
       });
