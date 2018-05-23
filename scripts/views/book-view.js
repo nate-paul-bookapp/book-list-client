@@ -2,16 +2,16 @@
 
 var app = app || {};
 
-var bookView = {};
 
 (function(module) {
+  var bookView = {};
 
   bookView.initIndexPage = function() {
     $('.container').hide();
     $('.book-view').show();
 
     app.Book.all.forEach(elem => {
-      $('#book-display').append(elem.toHtml());
+      $('#book-list').append(elem.toHtml());
     });
 
     console.log(app.Book.all.length);

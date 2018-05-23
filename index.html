@@ -20,6 +20,11 @@
       </article>
     </script>
 
+    <script id="error-template" type="text/x-handlebars-template">
+      <p>{{status}}</p>
+      <p>{{statusText}}</p>
+    </script>
+
   </head>
 
   <body>
@@ -31,19 +36,29 @@
     </header>
     
     <main>
-      <section class="book-view">
+      <section class="book-view container">
         <a>my books</a>
         <p id="book-count">Total books in database: </p>
-        <div id="book-display"></div>
+        <div id="book-list"></div>
       </section>
+
+      <section id="book-detail" class="container">
+        <p>Book Details</p>
+      </section>
+
+      <section id="error-view" class="container">
+        <p>Error</p>
+      </section>
+
       <section id="about-us" class="container">
+        <p>About Us</p>
       </section>
     </main>
 
     <footer>
       <ul>
-        <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
-        <li><a><img src="http://via.placeholder.com/50x50" alt="link image" /></a></li>
+        <li><a href="www.github.com" class="icon-github"></a></li>
+        <li><a href="www.linkedin.com" class="linkedIn"></a></li>
       </ul>
     </footer>
 
@@ -53,9 +68,6 @@
     <script src="scripts/views/book-view.js"></script>
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/index.js"></script>
-    <script>
-      app.Book.fetchAll(app.bookView.initIndexPage);
-    </script>
   </body>
 
 </html> 

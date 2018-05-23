@@ -21,11 +21,13 @@ var app = app || {};
   };
 
   Book.fetchAll = callback => {
-    console.log(`${module.ENVIRONMENT.apiUrl}/api/v1/books`);
     $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/books`)
       .then(response => {
         Book.loadAll(response);
         callback();
+      })
+      .catch(err => {
+        app.errorView.errorCallback(err);
       });
   };
 
