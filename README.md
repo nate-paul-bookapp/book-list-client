@@ -49,6 +49,8 @@
 
 05-22-2018 1:26pm - Styling progressing on front-end; Icons files added to repo.
 
+5-23-2018 10:57am - Added Error Template and HTML views for single books, errors, and about-us.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
