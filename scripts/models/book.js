@@ -16,12 +16,19 @@ var app = app || {};
     return template(this);
   };
 
+  
   Book.loadAll = bookData => {
     Book.all = bookData.map(bookObj => new Book(bookObj));
   };
 
-  Book.fetchAll = callback => {
-    $.get(`${module.ENVIRONMENT.apiUrl}/api/v1/books`)
+  Book.fetchOne = (path) => {
+    console.log(path);
+    $.get(`${module.ENVIRONMENT.apiUrl}${path}`)
+      .then(response => console.log(response));
+  };
+
+  Book.fetchAll = (path, callback) => {
+    $.get(`${module.ENVIRONMENT.apiUrl}${path}`)
       .then(response => {
         Book.loadAll(response);
         callback();

@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css"  href="styles/modules.css" />
 
     <script id="book-template" type="text/x-handlebars-template">
-      <article id="book-block">
+      <article id="book-block" data-book-id="{{book_id}}">
         <img id="book-image" src="{{{image_url}}}" alt="Placeholder image" />
         <div id="book-stuff">
-          <h2>{{title}}</h2>
+          <h2><a href="/api/v1/books/{{book_id}}">{{title}}<a></a></h2>
           <p>{{author}}</p>
           <p>{{description}}</p>
         </div>
@@ -36,6 +36,12 @@
     </header>
     
     <main>
+      <ul>
+        <li><a href="/api/v1/books">Book List</a></li>
+        <li><a href="/api/v1/addnew">Add New Book</a></li>
+        <li><a href="/about-us">About Us</a></li>
+      </ul>
+
       <section class="book-view container">
         <a>my books</a>
         <p id="book-count">Total books in database: </p>
@@ -44,6 +50,13 @@
 
       <section id="book-detail" class="container">
         <p>Book Details</p>
+      </section>
+
+      <section id="new-book" class="container">
+        <p>Add New Book</p>
+        <form>
+          <input type="text" placeholder="author" />
+        </form>
       </section>
 
       <section id="error-view" class="container">
@@ -64,10 +77,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/models/book.js"></script>
     <script src="scripts/views/book-view.js"></script>
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/views/routes.js"></script>
   </body>
 
 </html> 

@@ -25,5 +25,5 @@ var app = app || {};
 })(app);
 
 $(function() {
-  app.Book.fetchAll(app.bookView.initIndexPage);
+  app.Book.fetchAll('/api/v1/books', app.bookView.initIndexPage);
 });
