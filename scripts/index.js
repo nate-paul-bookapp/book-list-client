@@ -23,3 +23,7 @@ var app = app || {};
     return template(data);
   };
 })(app);
+
+$(function() {
+  app.Book.fetchAll(app.bookView.initIndexPage);
+});
