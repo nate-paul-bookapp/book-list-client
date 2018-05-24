@@ -9,12 +9,13 @@
   <link rel="stylesheet" type="text/css" href="styles/base.css" />
   <link rel="stylesheet" type="text/css" href="styles/layout.css" />
   <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+  <link rel="stylesheet" type="text/css" href="styles/icons.css" />
 
   <script id="book-template" type="text/x-handlebars-template">
     <article>
       <img id="book-image" src="{{{image_url}}}" alt="{{title}} by {{author}}" />
       <div>
-        <h2><a href="/api/v1/books/{{book_id}}">{{title}}</a></h2>
+        <h2><a href="/api/v1/books/{{book_id}}">{{title}} <span class="icon-search"></span></a></h2>
         <p>{{author}}</p>
       </div>
     </article>
@@ -38,26 +39,27 @@
 </head>
 
 <body>
-  <header>
+  <header class="clear-fix">
     <nav>
-      <img src="http://via.placeholder.com/80x80" alt="Logo" />
+      <div class="icon-book"></div>
       <h1>Books App</h1>
+      <div class="icon-menu"></div>
     </nav>
   </header>
 
   <main>
     <ul>
       <li>
-        <a href="/">Book List</a>
+        <a class="icon-list-numbered" href="/">Book List</a>
       </li>
       <li>
-        <a href="/login">Login</a>
+        <a class="icon-cog" href="/login">Login</a>
       </li>
       <li>
-        <a href="/create-book">Add New Book</a>
+        <a class="icon-plus" href="/create-book">Add New Book</a>
       </li>
       <li>
-        <a href="/about-us">About Us</a>
+        <a class="icon-users" href="/about-us">About Us</a>
       </li>
     </ul>
 
@@ -75,28 +77,31 @@
 
     <section id="login-page" class="container">
       <input type="text" placeholder="Password" />
+      <span class="icon-lock"></span>
     </section>
 
     <section id="new-book" class="container">
-      <p>Add New Book</p>
+      <p><span class="icon-pencil2"></span> Add New Book</p>
       <form>
         <fieldset>
-          <label>
+          <label class="icon-book">
             <input type="text" placeholder="Title" id="new-title" required />
           </label>
-          <label>
+          <label class="icon-user">
             <input type="text" placeholder="Author" id="new-author" />
           </label>
-          <label>
+          <label class="icon-barcode">
             <input type="text" placeholder="ISBN" id="new-isbn" />
           </label>
-          <label>
+          <label class="icon-image">
             <input type="text" placeholder="Image URL" id="new-url" />
           </label>
-          <label>
+          <label class="icon-file-text2">
             <textarea rows="4" cols="30" placeholder="description" id="new-description"></textarea>
           </label>
-          <input type="submit" id="submit"/>
+          <label class="icon-floppy-disk">
+            <input type="submit" id="submit" />
+          </label>
         </fieldset>
       </form>
     </section>
@@ -113,10 +118,10 @@
   <footer>
     <ul>
       <li>
-        <a href="www.github.com" class="icon-github"></a>
+        <a class="icon-github" href="www.github.com"></a>
       </li>
       <li>
-        <a href="www.linkedin.com" class="linkedIn"></a>
+        <a class="icon-linkedin"></a>
       </li>
     </ul>
   </footer>

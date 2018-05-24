@@ -49,11 +49,13 @@
 
 05-22-2018 1:26pm - Styling progressing on front-end; Icons files added to repo.
 
-5-23-2018 10:57am - Added Error Template and HTML views for single books, errors, and about-us.
+05-23-2018 10:57am - Added Error Template and HTML views for single books, errors, and about-us.
 
-5-23-2018 5:39pm - Restructring Routes through Page.js
+05-23-2018 5:39pm - Restructring Routes through Page.js
 
-5-23-2018 7:30pm - Added Additional Client Routing
+05-23-2018 7:30pm - Added Additional Client Routing
+
+05-24-2018 10:39am - Added icons to links and call-for-action sections
 
 ## Credits and Collaborations
 
