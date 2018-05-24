@@ -21,8 +21,8 @@ var app = app || {};
       description: $('#new-description').val(),
     };
 
-    $.post('/submitted', newBook)
-      .then(response => console.log(response));
+    $.post(`${app.ENVIRONMENT.apiUrl}/submitted`, newBook)
+      .then(result => console.log(result));
   });
 
 

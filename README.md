@@ -57,6 +57,8 @@
 
 05-24-2018 10:39am - Added icons to links and call-for-action sections
 
+5-24-2018 1:25pm - Added Post functionality.
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
