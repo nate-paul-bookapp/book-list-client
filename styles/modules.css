@@ -6,6 +6,24 @@ header {
   background-color: rgb(150, 150, 150);
 }
 
+nav:hover ul {
+  display: block;
+}
+
 main {
   background-color: rgb(240, 240, 240);
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear-fix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
