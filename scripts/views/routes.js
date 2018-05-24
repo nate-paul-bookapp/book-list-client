@@ -1,12 +1,12 @@
 'use strict';
 
-page('/api/v1/books', ctx => app.Book.fetchAll(ctx.path, app.bookView.initIndexPage));
+page('/', (ctx) => app.Book.fetchAll(ctx, app.bookView.initIndexPage));
 
-page('/api/v1/addnew', app.bookView.initNewBookPage);
+page('/login', () => {
+  app.adminView.initAdminPage();
+});
 
-page('/about-us', app.bookView.initAboutUs);
-
-page('/api/v1/books/:id', ctx => app.Book.fetchOne(ctx.path));
+page('/about-us', (ctx) => app.aboutView.initAboutUs(ctx));
 
 
 

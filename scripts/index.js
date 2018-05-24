@@ -22,8 +22,5 @@ var app = app || {};
     let template = Handlebars.compile($(`#${templateId}`).text());
     return template(data);
   };
-})(app);
 
-$(function() {
-  app.Book.fetchAll('/api/v1/books', app.bookView.initIndexPage);
-});
+})(app);

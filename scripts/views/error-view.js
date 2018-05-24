@@ -2,19 +2,16 @@
 
 var app = app || {};
 
-
 (function(module) {
   var errorView = {};
 
   errorView.initErrorPage = function(err) {
-    $('.container').hide();
-    $('#error-view').show();
+    app.showOnly('#error-view');
     $('#error-message').empty();
     $('#error-view').append(app.render('error-template', err));
   };
 
   errorView.errorCallback = function(error) {
-    console.log(error);
     errorView.initErrorPage(error);
   };
 
