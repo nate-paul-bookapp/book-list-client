@@ -1,21 +1,10 @@
-header {
-  height: 6em;
-}
-
-nav {
-  height: 5em;
-  padding: .5em;
-}
-
-nav h1 {
-  display: inline-block;
-  line-height: 1em;
-  vertical-align: top;
-  font-size: 3em;
-  padding-top: .25em;
-}
-
 body {
   width: 42em;
   margin: auto;
+}
+
+nav ul{
+  display: none;
+  height: 5em;
+  padding: .5em;
 }
