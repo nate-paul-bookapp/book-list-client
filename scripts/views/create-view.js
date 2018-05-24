@@ -11,6 +11,21 @@ var app = app || {};
 
 
 
+  //TODO Complete HTML POST Request
+  $('#submit').on('click', (e) => {
+    e.preventDefault();
+
+    let newBook = {
+      title: $('#new-title').val(),
+      author: $('#new-author').val(),
+      isbn: $('#new-isbn').val(),
+      image_url: $('#new-url').val(),
+      description: $('#new-description').val(),
+    };
+    console.log(newBook);
+  });
+
+
 
   module.createView = createView;
 })(app);
