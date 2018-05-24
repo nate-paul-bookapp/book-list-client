@@ -2,7 +2,6 @@
 
 var app = app || {};
 
-
 (function(module) {
   var bookView = {};
 
@@ -10,24 +9,15 @@ var app = app || {};
     let $bookList = $('#book-list');
     $bookList.empty();
     $('.container').hide();
-    $('.book-view').show();
+    $('#book-view').show();
 
     app.Book.all.forEach(elem => {
       $bookList.append(elem.toHtml());
     });
 
-    console.log(app.Book.all.length);
-    $('#book-count').append(app.Book.all.length);
-  };
-
-  bookView.initNewBookPage = function() {
-    $('.container').hide();
-    $('#new-book').show();
-  };
-
-  bookView.initAboutUs = function() {
-    $('.container').hide();
-    $('#about-us').show();
+    let $bookCount = $('#book-count');
+    $bookCount.empty();
+    $bookCount.append(app.Book.all.length);
   };
 
   module.bookView = bookView;

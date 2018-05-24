@@ -51,6 +51,8 @@
 
 5-23-2018 10:57am - Added Error Template and HTML views for single books, errors, and about-us.
 
+5-23-2018 5:39pm - Restructring Routes through Page.js
+
 ## Credits and Collaborations
 
 * Oscar Otero - [JQuery Quick API Reference](https://oscarotero.com/jquery/)
