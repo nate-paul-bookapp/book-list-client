@@ -8,8 +8,7 @@ var app = app || {};
   bookView.initIndexPage = function() {
     let $bookList = $('#book-list');
     $bookList.empty();
-    $('.container').hide();
-    $('#book-view').show();
+    app.showOnly('#book-view');
 
     app.Book.all.forEach(elem => {
       $bookList.append(elem.toHtml());
