@@ -9,8 +9,6 @@ var app = app || {};
     app.showOnly('#new-book');
   };
 
-
-
   //TODO Complete HTML POST Request
   $('#submit').on('click', (e) => {
     e.preventDefault();
@@ -22,9 +20,10 @@ var app = app || {};
       image_url: $('#new-url').val(),
       description: $('#new-description').val(),
     };
-    console.log(newBook);
-  });
 
+    $.post('/submitted', newBook)
+      .then(response => console.log(response));
+  });
 
 
   module.createView = createView;

@@ -15,6 +15,6 @@ var app = app || {};
         $bookDetails.append(app.render('book-detail-template', response[0]));
       });
   };
-  
+
   module.detailView = detailView;
 })(app);
