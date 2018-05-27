@@ -9,7 +9,6 @@ var app = app || {};
     app.showOnly('#new-book');
   };
 
-  //TODO Complete HTML POST Request
   $('#submit').on('click', (e) => {
     e.preventDefault();
 

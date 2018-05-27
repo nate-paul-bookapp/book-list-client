@@ -15,7 +15,7 @@
     <article>
       <img id="book-image" src="{{{image_url}}}" alt="{{title}} by {{author}}" />
       <div>
-        <h2><a href="/api/v1/books/{{book_id}}">{{title}} <span class="icon-search"></span></a></h2>
+        <h2><a href="/details/{{book_id}}">{{title}} <span class="icon-search"></span></a></h2>
         <p>{{author}}</p>
       </div>
     </article>
@@ -28,6 +28,9 @@
         <h2>{{title}}</h2>
         <p>{{author}}</p>
         <p>{{description}}</p>
+        <button id="delete">
+          <span class="icon-bin" data-id={{book_id}}>Delete</span>
+        </button>
       </div>
     </article>
   </script>
@@ -55,7 +58,7 @@
 
   <main>
     <section id="book-view" class="container">
-      <a>my books</a>
+      <h1>My Books</h1>
       <p>Total books in database:
         <span id="book-count"></span>
       </p>
@@ -63,7 +66,7 @@
     </section>
 
     <section id="book-details" class="container">
-      <p>Book Details</p>
+      <h1>Book Details</h1>
     </section>
 
     <section id="login-page" class="container">
@@ -72,7 +75,7 @@
     </section>
 
     <section id="new-book" class="container">
-      <p><span class="icon-pencil2"></span> Add New Book</p>
+      <h1><span class="icon-pencil2"></span> Add New Book</h1>
       <form>
         <fieldset>
           <label class="icon-book">
@@ -98,11 +101,11 @@
     </section>
 
     <section id="error-view" class="container">
-      <p>Error</p>
+      <h1>Error</h1>
     </section>
 
     <section id="about-us" class="container">
-      <p>About Us</p>
+      <h1>About Us</h1>
     </section>
   </main>
 
