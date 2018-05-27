@@ -2,7 +2,11 @@
 
 page('/', (ctx) => app.Book.fetchAll(ctx, app.bookView.initIndexPage));
 
-page('/api/v1/books/:book_id', (ctx) => app.detailView.fetchOne(ctx));
+page('/details/:book_id', (ctx) => app.detailView.fetchOne(ctx));
+
+page('/destroy-book/:book-id', (ctx) => {
+  app.Book.destroyBook(ctx, app.bookView.initIndexPage);
+});
 
 page('/login', () => {
   app.adminView.initAdminPage();
