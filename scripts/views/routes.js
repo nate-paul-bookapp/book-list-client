@@ -12,6 +12,4 @@ page('/create-book', () => app.createView.initNewBookPage());
 
 page('/about-us', (ctx) => app.aboutView.initAboutUs(ctx));
 
-
-
 page();
