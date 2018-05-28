@@ -14,7 +14,7 @@ var app = app || {};
     return template(this);
   };
 
-  Book.loadAll = bookData => { 
+  Book.loadAll = bookData => {
     Book.all = bookData.map(bookObj => new Book(bookObj));
   };
 
