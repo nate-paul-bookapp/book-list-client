@@ -32,6 +32,15 @@
     </article>
   </script>
 
+  <script id="admin-template" type="text/x-handlebars-template">
+    <article>
+      <div>
+        <h2>{{title}}</h2>
+        <p>{{author}}</p>
+      </div>
+    </article>
+  </script>
+
   <script id="error-template" type="text/x-handlebars-template">
     <p>{{status}}</p>
     <p>{{statusText}}</p>
@@ -46,7 +55,7 @@
       <div class="icon-menu pull-right"></div>
       <ul class="menu-">
         <li><a class="icon-list-numbered" href="/">Book List</a></li>
-        <li><a class="icon-cog" href="/login">Login</a></li>
+        <li><a class="icon-cog" href="/admin">Admin Page</a></li>
         <li><a class="icon-plus" href="/create-book">Add New Book</a></li>
         <li><a class="icon-users" href="/about-us">About Us</a></li>
       </ul>
@@ -66,9 +75,8 @@
       <p>Book Details</p>
     </section>
 
-    <section id="login-page" class="container">
-      <input type="text" placeholder="Password" />
-      <span class="icon-lock"></span>
+    <section id="admin-view" class="container">
+      <div id="item-list"></div>
     </section>
 
     <section id="new-book" class="container">
